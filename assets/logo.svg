@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- 主渐变：深紫到青色 -->
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C5CE7"/>
+      <stop offset="100%" stop-color="#00CEC9"/>
+    </linearGradient>
+
+    <!-- 麦克风头部渐变 -->
+    <linearGradient id="micGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B68EE"/>
+      <stop offset="50%" stop-color="#6C5CE7"/>
+      <stop offset="100%" stop-color="#4834C4"/>
+    </linearGradient>
+
+    <!-- 声波渐变 -->
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00CEC9"/>
+      <stop offset="100%" stop-color="#00B5B0"/>
+    </linearGradient>
+
+    <!-- 锤子渐变 -->
+    <linearGradient id="hammerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5E0"/>
+      <stop offset="100%" stop-color="#00B5B0"/>
+    </linearGradient>
+
+    <!-- 锤头金属渐变 -->
+    <linearGradient id="hammerHeadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5E0"/>
+      <stop offset="40%" stop-color="#00CEC9"/>
+      <stop offset="100%" stop-color="#009E9A"/>
+    </linearGradient>
+
+    <!-- 光晕效果 -->
+    <radialGradient id="glowGrad" cx="50%" cy="42%" r="45%">
+      <stop offset="0%" stop-color="#6C5CE7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#6C5CE7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 火花光晕 -->
+    <radialGradient id="sparkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00CEC9" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00CEC9" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 铁砧渐变 -->
+    <linearGradient id="anvilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A4BD1"/>
+      <stop offset="100%" stop-color="#4834C4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 透明背景 -->
+
+  <!-- ===== 背景光晕 ===== -->
+  <circle cx="256" cy="230" r="210" fill="url(#glowGrad)"/>
+
+  <!-- ===== 铁砧底座（麦克风底座兼做铁砧） ===== -->
+  <g transform="translate(256, 256)">
+    <!-- 铁砧主体 - 梯形 -->
+    <path d="M-55,120 L-45,140 Q-44,148 -36,148 L36,148 Q44,148 45,140 L55,120 Z" 
+          fill="url(#anvilGrad)" opacity="0.85"/>
+    <!-- 铁砧顶部平台 -->
+    <rect x="-58" y="115" width="116" height="10" rx="3" fill="#5A4BD1" opacity="0.9"/>
+    <!-- 铁砧高光 -->
+    <rect x="-50" y="117" width="40" height="5" rx="2" fill="white" opacity="0.1"/>
+    <!-- 铁砧角（左） -->
+    <path d="M-58,115 L-68,108 L-62,115 Z" fill="#5A4BD1" opacity="0.7"/>
+  </g>
+
+  <!-- ===== 麦克风主体 ===== -->
+  <g transform="translate(256, 240)">
+    <!-- 麦克风支架 - 垂直线 -->
+    <rect x="-5" y="48" width="10" height="72" rx="5" fill="url(#mainGrad)" opacity="0.9"/>
+
+    <!-- 麦克风头部 - 圆角胶囊形 -->
+    <rect x="-40" y="-95" width="80" height="148" rx="40" ry="40" 
+          fill="url(#micGrad)" stroke="none"/>
+
+    <!-- 麦克风头部网格纹理 -->
+    <g opacity="0.12" stroke="white" stroke-width="1.2">
+      <line x1="-28" y1="-65" x2="28" y2="-65"/>
+      <line x1="-34" y1="-45" x2="34" y2="-45"/>
+      <line x1="-37" y1="-25" x2="37" y2="-25"/>
+      <line x1="-37" y1="-5" x2="37" y2="-5"/>
+      <line x1="-34" y1="15" x2="34" y2="15"/>
+      <line x1="-28" y1="35" x2="28" y2="35"/>
+    </g>
+
+    <!-- 麦克风头部高光 -->
+    <rect x="-30" y="-88" width="20" height="128" rx="10" ry="10" 
+          fill="white" opacity="0.1"/>
+  </g>
+
+  <!-- ===== 声波效果（右侧） ===== -->
+  <g transform="translate(256, 195)" opacity="0.9">
+    <!-- 第一层声波 -->
+    <path d="M55,-28 Q72,-14 72,0 Q72,14 55,28" 
+          stroke="#00CEC9" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+    <!-- 第二层声波 -->
+    <path d="M78,-48 Q102,-24 102,0 Q102,24 78,48" 
+          stroke="#00CEC9" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.65"/>
+
+    <!-- 第三层声波 -->
+    <path d="M100,-66 Q132,-33 132,0 Q132,33 100,66" 
+          stroke="#00CEC9" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- 第四层声波（最外层） -->
+    <path d="M118,-80 Q158,-40 158,0 Q158,40 118,80" 
+          stroke="#00CEC9" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.22"/>
+  </g>
+
+  <!-- ===== 锻造锤子（左上方，动态斜置） ===== -->
+  <g transform="translate(148, 108) rotate(-40)">
+    <!-- 锤柄 -->
+    <rect x="-4.5" y="2" width="9" height="62" rx="4.5" 
+          fill="url(#hammerGrad)" opacity="0.95"/>
+
+    <!-- 锤柄纹理 -->
+    <line x1="-2" y1="20" x2="2" y2="20" stroke="white" stroke-width="1" opacity="0.2"/>
+    <line x1="-2" y1="35" x2="2" y2="35" stroke="white" stroke-width="1" opacity="0.2"/>
+    <line x1="-2" y1="50" x2="2" y2="50" stroke="white" stroke-width="1" opacity="0.2"/>
+
+    <!-- 锤头主体 -->
+    <rect x="-22" y="-26" width="44" height="30" rx="6" 
+          fill="url(#hammerHeadGrad)"/>
+
+    <!-- 锤头打击面（底部加厚） -->
+    <rect x="-22" y="-2" width="44" height="6" rx="2" fill="#009E9A" opacity="0.6"/>
+
+    <!-- 锤头高光 -->
+    <rect x="-17" y="-22" width="14" height="20" rx="4" 
+          fill="white" opacity="0.2"/>
+
+    <!-- 锤头顶部装饰线 -->
+    <line x1="-16" y1="-24" x2="16" y2="-24" stroke="white" stroke-width="1" opacity="0.15"/>
+  </g>
+
+  <!-- ===== 锻造火花与碰撞效果 ===== -->
+  <g transform="translate(256, 240)">
+    <!-- 碰撞光晕 -->
+    <circle cx="-52" cy="-108" r="28" fill="url(#sparkGlow)"/>
+
+    <!-- 大火花粒子 -->
+    <circle cx="-52" cy="-112" r="5" fill="#00CEC9" opacity="0.95">
+      <animate attributeName="opacity" values="0.95;0.5;0.95" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-70" cy="-96" r="3.5" fill="#00E5E0" opacity="0.8"/>
+    <circle cx="-40" cy="-128" r="3" fill="#6C5CE7" opacity="0.85"/>
+    <circle cx="-82" cy="-82" r="2.5" fill="#00CEC9" opacity="0.65"/>
+
+    <!-- 小火花粒子 -->
+    <circle cx="-35" cy="-138" r="2.2" fill="white" opacity="0.75"/>
+    <circle cx="-62" cy="-120" r="2" fill="white" opacity="0.55"/>
+    <circle cx="-88" cy="-90" r="1.8" fill="#00CEC9" opacity="0.5"/>
+    <circle cx="-28" cy="-118" r="1.5" fill="#6C5CE7" opacity="0.6"/>
+    <circle cx="-75" cy="-110" r="1.5" fill="white" opacity="0.4"/>
+
+    <!-- 火花飞溅线条 -->
+    <line x1="-48" y1="-118" x2="-60" y2="-142" stroke="#00CEC9" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+    <line x1="-56" y1="-108" x2="-80" y2="-122" stroke="#00CEC9" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+    <line x1="-38" y1="-126" x2="-28" y2="-150" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+    <line x1="-65" y1="-100" x2="-90" y2="-98" stroke="#00CEC9" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+    <line x1="-44" y1="-130" x2="-52" y2="-152" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- 星形火花 -->
+    <g transform="translate(-52, -112)" opacity="0.9">
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#00E5E0" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#00E5E0" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#00E5E0" stroke-width="1" stroke-linecap="round"/>
+      <line x1="5.5" y1="-5.5" x2="-5.5" y2="5.5" stroke="#00E5E0" stroke-width="1" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ===== AI 电路元素（底部装饰） ===== -->
+  <g transform="translate(256, 440)" opacity="0.35">
+    <!-- 电路节点 -->
+    <circle cx="-35" cy="0" r="3" fill="#00CEC9"/>
+    <circle cx="-12" cy="0" r="2.5" fill="#6C5CE7"/>
+    <circle cx="12" cy="0" r="2.5" fill="#6C5CE7"/>
+    <circle cx="35" cy="0" r="3" fill="#00CEC9"/>
+
+    <!-- 连接线 -->
+    <line x1="-35" y1="0" x2="-12" y2="0" stroke="#6C5CE7" stroke-width="1.5"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#00CEC9" stroke-width="1.5"/>
+    <line x1="12" y1="0" x2="35" y2="0" stroke="#00CEC9" stroke-width="1.5"/>
+
+    <!-- 分支线路 -->
+    <line x1="-35" y1="0" x2="-50" y2="-14" stroke="#00CEC9" stroke-width="1" opacity="0.7"/>
+    <line x1="35" y1="0" x2="50" y2="-14" stroke="#00CEC9" stroke-width="1" opacity="0.7"/>
+    <circle cx="-50" cy="-14" r="2" fill="#00CEC9" opacity="0.6"/>
+    <circle cx="50" cy="-14" r="2" fill="#00CEC9" opacity="0.6"/>
+
+    <!-- 中心节点脉冲 -->
+    <circle cx="0" cy="0" r="4" fill="none" stroke="#6C5CE7" stroke-width="1" opacity="0.4"/>
+  </g>
+</svg>
