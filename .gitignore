@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+sdist/
+develop-eggs/
+.installed.cfg
+
+# 虚拟环境
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 项目特定
+output/
+projects/
+export/
+*.mp3
+*.wav
+*.ogg
+*.flac
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 测试
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# 分发
+*.spec
+
+# PyInstaller
+*.manifest
+
+# 日志
+*.log
+
+# 操作系统
+Thumbs.db
+.DS_Store
